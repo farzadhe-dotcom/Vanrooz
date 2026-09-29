@@ -284,6 +284,7 @@ export default {
         return json({
           service: "vanrooz",
           configured: !!env.SUPABASE_URL,
+          databaseReadConfigured: !!env.SUPABASE_URL && !!env.SUPABASE_PUBLISHABLE_KEY,
           updatesPaused: env.UPDATES_PAUSED === "true",
         });
       if (url.pathname.startsWith("/api/admin/")) {
@@ -362,7 +363,13 @@ export default {
       if (url.pathname.startsWith("/api/"))
         return json({ error: "NOT_FOUND" }, 404);
       return env.ASSETS.fetch(request);
-    } catch {
+    } catch (error) {
+      const safeCode =
+        error instanceof Error &&
+        /^(DATABASE_HTTP_[0-9]{3}|DATABASE_UNCONFIGURED)$/.test(error.message)
+          ? error.message
+          : "INTERNAL_ERROR";
+      console.error("PUBLIC_API_FAILURE", safeCode);
       return json({ error: "SERVICE_UNAVAILABLE" }, 503);
     }
   },

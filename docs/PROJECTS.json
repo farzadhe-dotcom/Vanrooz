@@ -1,0 +1,22 @@
+{
+  "github": {
+    "repository": "farzadhe-dotcom/Vanrooz",
+    "write_status": "Repository installation connected; initial README write verified"
+  },
+  "supabase": {
+    "name": "vanrooz",
+    "ref": "zgmglflafmihbvxsgheg",
+    "organization_id": "wkzucxodhkdtcrwckpzy",
+    "region": "ca-central-1",
+    "url": "https://zgmglflafmihbvxsgheg.supabase.co",
+    "status": "ACTIVE_HEALTHY",
+    "migration": "vanrooz_initial",
+    "storage_bucket": "vanrooz-images"
+  },
+  "cloudflare": {
+    "status": "not deployed"
+  },
+  "openai": {
+    "status": "not configured; no real API test run"
+  }
+}

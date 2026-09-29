@@ -9,25 +9,25 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*"],
+    "run_worker_first": ["/api/*"]
   },
   "workflows": [
     {
       "name": "vanrooz-daily",
       "binding": "DAILY",
-      "class_name": "DailyEdition",
-    },
+      "class_name": "DailyEdition"
+    }
   ],
   "triggers": { "crons": ["0 15,16 * * *"] },
   "observability": { "enabled": true },
   "vars": {
-    "UPDATES_PAUSED": "true",
+    "UPDATES_PAUSED": "false",
     "SUPABASE_URL": "https://zgmglflafmihbvxsgheg.supabase.co",
     "OPENAI_MODEL": "gpt-6-luna",
-    "PRICING_MODEL": "UNVERIFIED",
-    "INPUT_USD_PER_MILLION": "0",
-    "OUTPUT_USD_PER_MILLION": "0",
+    "PRICING_MODEL": "gpt-6-luna",
+    "INPUT_USD_PER_MILLION": "0.05",
+    "OUTPUT_USD_PER_MILLION": "0.25",
     "MONTHLY_BUDGET_USD": "20",
-    "DAILY_BUDGET_USD": "0.60",
-  },
+    "DAILY_BUDGET_USD": "0.60"
+  }
 }

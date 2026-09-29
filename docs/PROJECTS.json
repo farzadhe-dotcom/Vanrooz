@@ -1,7 +1,8 @@
 {
   "github": {
     "repository": "farzadhe-dotcom/Vanrooz",
-    "write_status": "Repository installation connected; initial README write verified"
+    "write_status": "All 35 source files uploaded; deployment configuration read back and verified",
+    "source_commit": "967443586778361056b41c764e86e3485bf2cc04"
   },
   "supabase": {
     "name": "vanrooz",

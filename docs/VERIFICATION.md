@@ -13,7 +13,7 @@
 
 ## Incomplete or blocked
 
-- GitHub initial access failures resolved after repository app installation; README creation verified. Full source upload is the next step.
+- GitHub access restored and all 35 project files uploaded to main; deployment files read back successfully. Source commit: `967443586778361056b41c764e86e3485bf2cc04`.
 - Supabase project is now provisioned and migrated; Cloudflare runtime secrets and image uploads remain pending.
 - Cloudflare dashboard blocked by security verification; no deployed Worker, Workflow, production schedule or live URL.
 - No dedicated OpenAI account/key access: no real Responses call, Persian quality evaluation or measured API cost.
